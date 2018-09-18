@@ -1,0 +1,11 @@
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+}
+ 
+function changeTopImg() {
+    var imgs = ["400.jpg", "401.jpg", "402.jpg", "403.jpg", "404.jpg"];
+     document.getElementById("image").style.background = "url(" + imgs[randomInteger(0, imgs.length - 1)] + ")"; 
+     $("#image").css("background", "url(" + imgs[randomInteger(0, imgs.length - 1)] + ")"); 
+}
